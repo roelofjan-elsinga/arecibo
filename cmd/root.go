@@ -101,7 +101,7 @@ var rootCmd = &cobra.Command{
 		// Output
 
 		if terminalOutput {
-			fmt.Printf("---- Start randomized content ----\n\n%s\n---- End randomized content ----", randomizedContent)
+			fmt.Printf(randomizedContent)
 			return nil
 		}
 

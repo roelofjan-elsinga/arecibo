@@ -15,7 +15,6 @@ import (
 
 var srcFile string
 var targetFile string
-var writeMode string
 var terminalOutput bool
 
 // rootCmd represents the base command when called without any subcommands

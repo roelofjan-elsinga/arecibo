@@ -29,10 +29,17 @@ var rootCmd = &cobra.Command{
 			return errors.New("source file is empty")
 		}
 
-		if workDir, err := os.Getwd(); err != nil {
+		workDir, err := os.Getwd()
+
+		if err != nil {
 			return err
-		} else {
+		}
+
+		if srcFile[0:1] != "/" {
 			srcFile = fmt.Sprintf("%s/%s", workDir, srcFile)
+		}
+
+		if targetFile[0:1] != "/" {
 			targetFile = fmt.Sprintf("%s/%s", workDir, targetFile)
 		}
 
